@@ -236,6 +236,11 @@ namespace esphome
                 // Enable bat detection
                 Write1Byte(0x32, 0x46);
             }
+            if (this->charge_current_ != nullptr)
+            {
+                ESP_LOGD(TAG, "Setting charge current to: %d (check AXP192ChargeCurrent enum to decode it to mA)", this->charge_current_);
+            }
+
         }
 
         void AXP192Component::Write1Byte(uint8_t Addr, uint8_t Data)
