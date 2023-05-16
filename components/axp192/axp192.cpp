@@ -12,6 +12,7 @@ namespace esphome
         void AXP192Component::setup()
         {
             ESP_LOGD(TAG, "setup(): Model %d", this->model_);
+            ESP_LOGD(TAG, "setup(): Charge current %d", this->charge_current_);
 
             switch (this->model_)
             {
@@ -236,10 +237,8 @@ namespace esphome
                 // Enable bat detection
                 Write1Byte(0x32, 0x46);
             }
-            if (this->charge_current_ != nullptr)
-            {
-                ESP_LOGD(TAG, "Setting charge current to: %d (check AXP192ChargeCurrent enum to decode it to mA)", this->charge_current_);
-            }
+
+            // Set charge current
 
         }
 
