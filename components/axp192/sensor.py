@@ -21,18 +21,18 @@ MODELS = {
     "TTGO_TCALL": AXP192Model.AXP192_TTGO_TCALL,
 }
 CHARGE_CURRENTS = {
-    "100mA": AXP192ChargeCurrent.CURRENT_100MA,
-    "190mA": AXP192ChargeCurrent.CURRENT_190MA,
-    "280mA": AXP192ChargeCurrent.CURRENT_280MA,
-    "360mA": AXP192ChargeCurrent.CURRENT_360MA,
-    "450mA": AXP192ChargeCurrent.CURRENT_450MA,
-    "550mA": AXP192ChargeCurrent.CURRENT_550MA,
-    "630mA": AXP192ChargeCurrent.CURRENT_630MA,
-    "700mA": AXP192ChargeCurrent.CURRENT_700MA,
+    "100MA": AXP192ChargeCurrent.CURRENT_100MA,
+    "190MA": AXP192ChargeCurrent.CURRENT_190MA,
+    "280MA": AXP192ChargeCurrent.CURRENT_280MA,
+    "360MA": AXP192ChargeCurrent.CURRENT_360MA,
+    "450MA": AXP192ChargeCurrent.CURRENT_450MA,
+    "550MA": AXP192ChargeCurrent.CURRENT_550MA,
+    "630MA": AXP192ChargeCurrent.CURRENT_630MA,
+    "700MA": AXP192ChargeCurrent.CURRENT_700MA,
 }
 
 AXP192_MODEL = cv.enum(MODELS, upper=True, space="_")
-AXP192_CHARGE_CURRENT = cv.enum(CHARGE_CURRENTS, space="")
+AXP192_CHARGE_CURRENT = cv.enum(CHARGE_CURRENTS, upper=True, space="")
 
 CONFIG_SCHEMA = cv.Schema({
     cv.GenerateID(): cv.declare_id(AXP192Component),
