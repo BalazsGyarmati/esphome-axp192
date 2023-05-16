@@ -25,7 +25,7 @@ namespace esphome
 
         enum AXP192ChargeCurrent : uint8_t
         {
-            CURRENT_100MA = 0
+            CURRENT_100MA = 0,
             CURRENT_190MA,
             CURRENT_280MA,
             CURRENT_360MA,
