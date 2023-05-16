@@ -239,6 +239,7 @@ namespace esphome
             }
 
             // Set charge current
+            SetChargeCurrent(this->charge_current_);
 
         }
 
